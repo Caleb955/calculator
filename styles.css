@@ -1,0 +1,302 @@
+body {
+    background-color: hsl(222, 26%, 31%);
+    color: hsl(0, 0%, 100%);
+    font-family: "League Spartan", sans-serif;
+    font-size: 32px;
+    margin: 0;
+    height: 100vh;
+}
+
+html[theme="second"] body {
+    background-color: hsl(0, 0%, 90%);
+}
+
+html[theme="third"] body {
+    background-color: hsl(268, 75%, 9%);
+}
+
+#main {
+    width: min(100% - 20px, 340px);
+    height: 100%;
+    margin-inline: auto;
+    margin-top: 40px;
+}
+
+h1, h2, h3, p {
+    margin-top: 0;
+}
+
+#first-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#first-container h1 {
+    font-size: 20px;
+    margin-bottom: 0;
+    align-self: flex-end;
+}
+
+html[theme="second"] #first-container h1 {
+    color: hsl(60, 10%, 19%);
+}
+
+html[theme="third"] #first-container h1 {
+    color: hsl(52, 100%, 62%);
+}
+
+#first-container h2 {
+    font-size: 10px;
+    margin-bottom: 0;
+    align-self: flex-end;
+}
+
+html[theme="second"] #first-container h2 {
+    color: hsl(60, 10%, 19%);
+}
+
+html[theme="third"] #first-container h2 {
+    color: hsl(52, 100%, 62%);
+}
+
+#switcher-box {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#switcher-box .switcher-inner {
+    display: flex;
+    flex-direction: column;
+    width: 60px;
+    gap: 4px;
+}
+
+.mode-counter {
+    display: flex;
+    justify-content: space-between;
+    padding-inline: 4px;
+}
+
+#switcher-box div > span {
+    font-size: 12px;
+}
+
+html[theme="second"] #switcher-box div > span {
+    color: hsl(60, 10%, 19%);
+}
+
+html[theme="third"] #switcher-box div > span {
+    color: hsl(52, 100%, 62%);
+}
+
+.slider-box {
+    background-color: hsl(224, 36%, 15%);
+    padding: 5px;
+    border-radius: 10px;
+    position: relative;
+}
+
+html[theme="second"] .slider-box {
+    background-color: hsl(0, 5%, 81%);
+}
+
+html[theme="third"] .slider-box {
+    background-color: hsl(268, 71%, 12%);
+}
+
+.slider-axis {
+    display: flex;
+    justify-content: flex-start;
+}
+
+html[theme="second"] .slider-axis {
+    justify-content: center;
+}
+
+html[theme="third"] .slider-axis {
+    justify-content: flex-end;
+}
+
+.slider-box #slider {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: hsl(6, 63%, 50%);
+}
+
+html[theme="second"] .slider-box #slider {
+    background-color: hsl(25, 98%, 40%);
+}
+
+html[theme="third"] .slider-box #slider {
+    background-color: hsl(176, 100%, 44%);
+}
+
+.slider-position {
+    height: 100%;
+    inset: 0;
+    position: absolute;
+    display: flex;
+    gap: 4px;
+}
+
+.slider-position div {
+    flex: 1;
+    cursor: pointer;
+}
+
+#second-container > .view {
+    background-color: hsl(224, 36%, 15%);
+    height: 80px;
+    border-radius: 5px;
+    margin-top: 20px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+html[theme="second"] #second-container > .view {
+    background-color: hsl(0, 0%, 93%);
+    color: hsl(60, 10%, 19%);
+}
+
+html[theme="third"] #second-container > .view {
+    background-color: hsl(268, 71%, 12%);
+    color: hsl(52, 100%, 62%);
+}
+
+#second-container > .view div {
+    overflow: hidden;
+    margin-inline: 20px;
+    height: 2rem;
+    overflow-x: auto;
+    white-space: nowrap;
+    scrollbar-width: none;
+}
+
+#third-container {
+    background-color: hsl(223, 31%, 20%);
+    margin-top: 20px;
+    border-radius: 5px;
+    padding: 20px;
+}
+
+html[theme="second"] #third-container {
+    background-color: hsl(0, 5%, 81%);
+}
+
+html[theme="third"] #third-container {
+    background-color: hsl(268, 71%, 12%);
+}
+
+.button-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+}
+
+.button-container div {
+    font-size: 1.3rem;
+    height: 40px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: hsl(198, 20%, 13%);
+    font-weight: 800;
+    cursor: pointer;
+}
+
+.button-container > .white-button {
+    background-color: hsl(30, 25%, 89%);
+    border-bottom: 4px solid hsl(35, 11%, 61%);
+}
+
+.button-container > .white-button:hover {
+    background-color: hsl(30, 25%, 96%);
+}
+
+html[theme="second"] .button-container > .white-button {
+    background-color: hsl(45, 7%, 89%);
+    border-bottom: 4px solid hsl(35, 11%, 61%);
+}
+
+html[theme="second"] .button-container > .white-button:hover {
+    background-color: hsl(30, 11%, 93%);
+}
+
+html[theme="third"] .button-container > .white-button {
+    background-color: hsl(268, 47%, 21%);
+    color: hsl(52, 100%, 62%);
+    border-bottom: 4px solid hsl(290, 70%, 36%);
+}
+
+html[theme="third"] .button-container > .white-button:hover {
+    background-color: hsl(268, 47%, 30%);
+}
+
+.button-container > .blue-button {
+    background-color: hsl(225, 21%, 49%);
+    border-bottom: 4px solid hsl(224, 28%, 35%);
+    color: hsl(0, 0%, 100%);
+}
+
+.button-container > .blue-button:hover {
+    background-color: hsl(225, 21%, 55%);
+}
+
+html[theme="second"] .button-container > .blue-button {
+    background-color: hsl(185, 42%, 37%);
+    border-bottom: 4px solid hsl(185, 58%, 25%);
+}
+
+html[theme="second"] .button-container > .blue-button:hover {
+    background-color: hsl(185, 42%, 45%);
+}
+
+html[theme="third"] .button-container > .blue-button {
+    background-color: hsl(281, 89%, 26%);
+    border-bottom: 4px solid hsl(285, 91%, 52%);
+}
+
+html[theme="third"] .button-container > .blue-button:hover {
+    background-color: hsl(281, 89%, 35%);
+}
+
+
+.button-container > .red-button {
+    background-color: hsl(6, 63%, 50%);
+    color: hsl(0, 0%, 100%);
+    border-bottom: 4px solid hsl(6, 70%, 34%);
+}
+
+.button-container > .red-button:hover {
+    background-color: hsl(6, 63%, 60%);
+}
+
+html[theme="second"] .button-container > .red-button {
+    background-color: hsl(25, 98%, 40%);
+    border-bottom: 4px solid hsl(25, 99%, 27%);
+}
+
+html[theme="second"] .button-container > .red-button:hover {
+    background-color: hsl(25, 98%, 45%);
+}
+
+html[theme="third"] .button-container > .red-button {
+    background-color: hsl(176, 100%, 44%);
+    border-bottom: 4px solid hsl(177, 92%, 70%);
+}
+
+html[theme="third"] .button-container > .red-button:hover {
+    background-color: hsl(176, 100%, 50%);
+    border-bottom: 4px solid hsl(177, 92%, 70%);
+}
+
+
+.reset, .equal {
+    grid-column: span 2;
+}

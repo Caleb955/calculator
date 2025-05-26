@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+  
+  <title>Frontend Mentor | Calculator app</title>
+
+  <script src="script.js" defer></script>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center;}
+    .attribution a { color: hsl(228, 45%, 44%); }
+
+    html[theme="second"] .attribution {
+      color: hsl(60, 10%, 19%);
+    }
+  </style>
+</head>
+<body>
+
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Caleb Uwem Akpan</a>.
+  </div>
+
+
+  <div id="main">
+    <section class="container" id="first-container">
+      <h1>calc</h1>
+
+      <div id="switcher-box">
+        <h2>THEME</h2>
+
+        <div class="switcher-inner">
+          <div class="mode-counter">
+            <span>1</span>
+            <span>2</span>
+            <span>3</span>
+          </div>
+
+          <div class="slider-box">
+            <div class="slider-axis">
+              <div id="slider"></div>
+            </div>
+
+            <div class="slider-position">
+              <div class="mode" data-theme="first"></div>
+              <div class="mode" data-theme="second"></div>
+              <div class="mode" data-theme="third"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="container" id="second-container">
+      <div class="view">
+        <div id="js-view">0</div>
+      </div>
+    </section>
+
+    <section class="container" id="third-container">
+      <div class="button-container">
+        <div class="white-button calculation-button">7</div>
+        <div class="white-button calculation-button">8</div>
+        <div class="white-button calculation-button">9</div>
+        <div class="blue-button js-del">DEL</div>
+
+        <div class="white-button calculation-button">4</div>
+        <div class="white-button calculation-button">5</div>
+        <div class="white-button calculation-button">6</div>
+        <div class="white-button calculation-button" data-symbol="+">+</div>
+
+        <div class="white-button calculation-button">1</div>
+        <div class="white-button calculation-button">2</div>
+        <div class="white-button calculation-button">3</div>
+        <div class="white-button calculation-button" data-symbol="-">-</div>
+
+        <div class="white-button calculation-button">.</div>
+        <div class="white-button calculation-button">0</div>
+        <div class="white-button calculation-button" data-symbol="/">/</div>
+        <div class="white-button calculation-button" data-symbol="*">x</div>
+
+        <div class="reset blue-button js-reset">RESET</div>
+        <div class="equal red-button js-equal">=</div>
+      </div>
+    </section>
+  </div>
+</body>
+</html>
